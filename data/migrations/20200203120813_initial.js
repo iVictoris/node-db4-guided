@@ -23,5 +23,7 @@ exports.up = async function(knex) {
 };
 
 exports.down = async function(knex) {
-
+  await knex.schema.dropTableIfExists('animals')
+  await knex.schema.dropTableIfExists('species')
+  await knex.schema.dropTableIfExists('zoos')
 };
