@@ -6,7 +6,9 @@ exports.up = async function(knex) {
   })
   
   await knex.schema.createTable('animals', (table) => {
-    
+    table.increment('id')
+    table.string('name').notNullable()
+    // foreign key?? wait for species
   })
 
   await knex.schema.createTable('species', (table) => {
