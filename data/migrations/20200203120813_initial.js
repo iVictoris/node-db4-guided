@@ -30,6 +30,10 @@ exports.up = async function(knex) {
       .integer('animal_id')
       .references('id')
       .inTable('animals')
+    
+    table.date('from');
+    table.date('to');
+      
   });
 };
 
