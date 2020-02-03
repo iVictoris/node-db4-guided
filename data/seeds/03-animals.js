@@ -13,6 +13,6 @@ exports.seed = function(knex, Promise) {
     { name: "Augusta", species_id: 4 },
     { name: "Stephen", species_id: 7 },
     { name: "Rocky", species_id: 8 },
-    // { animal_name: "Bellatrix", species_id: 19 }
+    // { name: "Bellatrix", species_id: 19 }
   ]);
 };

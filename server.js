@@ -21,7 +21,7 @@ server.get('/api/species', (req, res) => {
 
 server.get('/api/animals', (req, res) => {
   // get all animals from the database
-  // include species name
+  // include species name;
   db('animals as a')
     .leftJoin('species as s', 's.id', 'a.species_id')
     .select('a.id', 'a.name', 's.name')
