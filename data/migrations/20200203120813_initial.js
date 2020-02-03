@@ -8,7 +8,10 @@ exports.up = async function(knex) {
   await knex.schema.createTable('animals', (table) => {
     table.increment('id')
     table.string('name').notNullable()
-    // foreign key?? wait for species
+    table.integer('species_id')
+      .notNullable()
+      .references('id')
+      .inTable('species');
   })
 
   await knex.schema.createTable('species', (table) => {
@@ -20,5 +23,5 @@ exports.up = async function(knex) {
 };
 
 exports.down = async function(knex) {
-  
+
 };
