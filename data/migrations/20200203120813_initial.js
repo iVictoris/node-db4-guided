@@ -33,7 +33,8 @@ exports.up = async function(knex) {
     
     table.date('from');
     table.date('to');
-      
+
+    table.primary(['zoo_id', 'animal_id'])
   });
 };
 
