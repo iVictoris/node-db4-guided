@@ -4,6 +4,11 @@ exports.up = async function(knex) {
     table.string('name').notNullable()
     table.string('address').notNullable()
   })
+
+  await knex.schema.createTable('species', (table) => {
+    table.increment('id');
+    table.string('name').notNullable();
+  })
   
   await knex.schema.createTable('animals', (table) => {
     table.increment('id')
@@ -12,11 +17,6 @@ exports.up = async function(knex) {
       .notNullable()
       .references('id')
       .inTable('species');
-  })
-
-  await knex.schema.createTable('species', (table) => {
-    table.increment('id');
-    table.string('name').notNullable();
   })
 
   
