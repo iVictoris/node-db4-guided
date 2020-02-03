@@ -1,7 +1,7 @@
-exports.up = function(knex) {
+exports.up = async function(knex) {
   
 };
 
-exports.down = function(knex) {
+exports.down = async function(knex) {
   
 };
